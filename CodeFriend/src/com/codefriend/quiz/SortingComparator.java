@@ -31,7 +31,7 @@ class Checker implements Comparator<Player>{
 		if(o1.score==o2.score){
 			return   o2.name.compareTo(o1.name);
 		}else{
-			return o2.score-o1.score;	
+			return o1.score-o2.score;	
 		}
 		
 	}
