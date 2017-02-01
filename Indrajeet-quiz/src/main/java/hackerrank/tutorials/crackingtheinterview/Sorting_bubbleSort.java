@@ -36,7 +36,7 @@ public class Sorting_bubbleSort {
 //        int[] ip = {5, 10, 1, 3, 2, 7, 9, 6};
 //        ArrayList<Integer> al = new ArrayList<Integer>();
 //        System.out.println("Old int array : " + Arrays.toString(ip));
-        // to print array element without iterate
+//         to print array element without iterate
 //        System.out.println("New int array : " + Arrays.toString(ip));
 
         Sorting_bubbleSort sbs = new Sorting_bubbleSort();
