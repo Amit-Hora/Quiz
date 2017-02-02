@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class parlourlatest{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int NumberOfTrips = in.nextInt();
+        for(int i=0;i<NumberOfTrips;i++){
+            int amount = in.nextInt();
+            int numberOfFlavours = in.nextInt();
+            int[] c = new int[numberOfFlavours];
+            for(int j=0;j<numberOfFlavours;j++){
+                c[j] = in.nextInt();
+            }
+            int c1 = 0;
+            int c2 = 0;
+            boolean flag = false;
+            for(int j=0;j<numberOfFlavours;j++){
+                for(int k =0;k<numberOfFlavours;k++){
+                    if(c[j]+c[k]==amount && j!=k){
+                        c1 = j+1;
+                        c2 = k+1;
+                        flag = true;
+                        break;
+                    }
+                } 
+                if(flag ==true){
+                    break;
+                }
+            }
+            System.out.println(c1<c2?(c1+" "+c2):(c2+" "+c1));
+        }
+    }
+}
