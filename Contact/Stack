@@ -1,0 +1,57 @@
+package com.wordsearch.Contacts;
+
+import java.util.*;
+
+public class Stack {
+
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        Stack<String> st=new Stack<String>();
+        st.push("");
+        int k=-1;
+        String prev="";
+        
+        for(int i=0;i<n;i++){
+            int op=sc.nextInt();
+            switch(op){
+                case 1:
+                String newstr=sc.next();
+                prev=st.peek();
+           //    System.out.println("prev " + prev);
+                st.push(prev+newstr);
+//
+//        		for (int j = 0; j < st.size(); j++)
+//        		{
+//        			System.out.println(st.get(j));
+//        		}
+//                break;
+                
+                case 2:
+                k=sc.nextInt();
+                prev=st.peek();
+                String temp=prev.substring(0,prev.length()-k);
+            //    System.out.println("temp " + temp);
+                st.push(temp);
+//            	for (int j = 0; j < st.size(); j++)
+//        		{
+//        			System.out.println(st.get(j));
+//        		}
+                break;
+                
+                case 3:
+                k=sc.nextInt();
+//                System.out.println(st.peek().charAt(k-1));
+                break;
+                
+                case 4:
+                st.pop();	
+//                for (int j = 0; j < st.size(); j++)
+//        		{
+//        			System.out.println(st.get(j));
+//        		}
+                break;
+            }
+	}
+}
+}
