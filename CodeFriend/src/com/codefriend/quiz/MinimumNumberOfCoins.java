@@ -38,7 +38,7 @@ public class MinimumNumberOfCoins {
 				
 				if(b[l]==0){
 					matrics[k][l]=0;
-				}
+	 			}
 				
 				
 				else {
