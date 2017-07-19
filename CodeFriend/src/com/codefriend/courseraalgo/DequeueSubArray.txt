@@ -1,0 +1,23 @@
+The problem is to find the unique elements in the Dequeue with the given array size
+now say we have following elements in the Dequeue
+5,3,5,2,3,2
+and given the size of subarray be 3
+so the subarray we have are
+5,3,5 unique elements 2
+3,5,2 unique elements 3
+5,2,3 unique elements 3
+2,3,2 unique elements 2
+
+so the maximum number of unique elements is 3
+
+-To solve this problem we can maintain a set and add elements to the set, since the set will maintain
+the unique elements , any element added twice will be counted only once
+-once the dequeue reaches it's size of sub-array that is 3 
+we will check the size of set and at the same time we will remove the element from head, as we have
+to keep moving forward
+-while removing element we will also check if the element is further present in the dequeue, if
+not then we will remove it from set as we don't want to include that element to calculate size of
+unique nunmber of elements in next subarray, if we had to calculate the unique value across the dequeue
+we won't be removing it
+
+ 
