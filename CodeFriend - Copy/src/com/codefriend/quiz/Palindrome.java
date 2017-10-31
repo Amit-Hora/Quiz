@@ -15,14 +15,9 @@ public class Palindrome {
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the string to check if the string is Palindrome");
-//		String inputString = scanner.nextLine();
-		StringBuilder inputString=new StringBuilder();
-		for(int i=0;i<146555;i++){
-			inputString.append("a");
-		}
-			
-		System.out.println(2*inputString.length());
-	
+		String inputString = scanner.nextLine();
+		
+		
 		if(isPalindrome(inputString)){
 			logger.log(Level.INFO, "String is Palindrome");
 		}else{
@@ -37,7 +32,7 @@ public class Palindrome {
 	 * @param inputString -> string to check for palindrome
 	 * @return true if palindrome else false
 	 */
-	public static boolean isPalindrome(StringBuilder inputString) {
+	public static boolean isPalindrome(String inputString) {
 		int inputStringLength = inputString.length();
 		int begin = 0, end = 0, middle = 0;
 
@@ -59,7 +54,7 @@ public class Palindrome {
 	 @Test
 	    public void myObjectEqualsTest(){
 	         
-		 StringBuilder inputString=new StringBuilder("1221");
+	       String inputString="1221";
 	        assertEquals(isPalindrome(inputString),true);
 	        
 	    }
